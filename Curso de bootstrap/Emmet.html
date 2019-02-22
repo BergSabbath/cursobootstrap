@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+    Emmet - Hierarquia (Pai e filhos)
+    <!-- div>ul>li -->
+    <div>
+        <ul>
+            <li></li>
+        </ul>
+    </div>
+    <!-- table>thead>th -->
+    <table>
+        <thead>
+            <th></th>
+        </thead>
+    </table>
+    <!-- table>tr>dt -->
+    <table>
+        <tr>
+            <dt></dt>
+        </tr>
+    </table>
+
+    Emmet - irmãos (mesmo nivel hierarquico)
+    <!-- div>ul+p -->
+    <div>
+        <ul></ul>
+        <p></p>
+    </div>
+    
+    Emmet - misturado
+    <!-- div>p+div>p+footer -->
+    <div>
+        <p></p>
+        <div>
+            <p></p>
+            <footer></footer>
+        </div>
+    </div>
+    
+    Emmet - Escalar atributos <!--"^" pula o item anterior -->
+    <!-- div>ul+li>p+footer -->
+    <div>
+        <ul></ul>
+        <li>
+            <p></p>
+            <footer></footer>
+        </li>
+    </div>
+    <!-- div>ul+li>p^footer -->
+    <div>
+        <ul></ul>
+        <li>
+            <p></p>
+        </li>
+        <footer></footer>
+    </div>
+    <!-- div>header>h1^section>article>h2+p^^footer>ul>li --> 
+    <div>
+        <header>
+            <h1></h1>
+        </header>
+        <section>
+            <article>
+                <h2></h2>
+                <p></p>
+            </article>
+        </section>
+        <footer>
+            <ul>
+                <li></li>
+            </ul>
+        </footer>
+    </div>
+    <!-- html>head>meta+title+link^body>section>header+footer -->
+    <html>
+    <head>
+        <meta>
+        <title></title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <section>
+            <header></header>
+            <footer></footer>
+        </section>
+    </body>
+    </html>
+    
+    Emmet - Multiplicar 
+    <!-- ul>li*3 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!-- table>tr*3>td*3 -->
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    Emmet - agrupar atributos
+    <!-- div>(ul>li*3>a)+div -->
+    <div>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+        <div></div>
+    </div>
+    <!-- div>ul>li*3>a+div -->
+    <div>
+        <ul>
+            <li>
+                <a href=""></a>
+                <div></div>
+            </li>
+            <li>
+                <a href=""></a>
+                <div></div>
+            </li>
+            <li>
+                <a href=""></a>
+                <div></div>
+            </li>
+        </ul>
+    </div>
+    <!-- table>(thead>th*3)+tbody>td*3 -->
+    <table>
+        <thead>
+            <th></th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tbody>
+    </table>
+
+    Emmet - texto
+    <!-- ul>li*3>a{clique aqui} -->
+    <ul>
+        <li><a href="">clique aqui</a></li>
+        <li><a href="">clique aqui</a></li>
+        <li><a href="">clique aqui</a></li>
+    </ul>
+    <!-- a*3{clique}>b{aqui} -->
+    <a href="">clique<b>aqui</b></a>
+    <a href="">clique<b>aqui</b></a>
+    <a href="">clique<b>aqui</b></a>
+
+    Emmet - Operadores de atributos 
+    id e classe:
+    <!-- div#header -->         <!-- #header -->
+    <div id="header"></div>     <div id="header"></div>
+
+    <!-- div.body -->           <!-- .body -->
+    <div class="body"></div>    <div class="body"></div>
+    
+    <!-- div.row>div*3.container -->
+    <div class="row">
+        <div class="container"></div>
+        <div class="container"></div>
+        <div class="container"></div>
+    </div>
+    <!-- table.tabela -->
+    <table class="tabela"></table>
+
+    <!-- table.tabela>th*3>td*3#item.width{dados} -->
+    <table class="tabela">
+        <th>
+            <td id="item" class="width">dados</td>
+            <td id="item" class="width">dados</td>
+            <td id="item" class="width">dados</td>
+        </th>
+        <th>
+            <td id="item" class="width">dados</td>
+            <td id="item" class="width">dados</td>
+            <td id="item" class="width">dados</td>
+        </th>
+        <th>
+            <td id="item" class="width">dados</td>
+            <td id="item" class="width">dados</td>
+            <td id="item" class="width">dados</td>
+        </th>
+    </table>
+    
+    <!-- table#tabela.tabela -->
+    <table id="tabela" class="tabela"></table>
+
+    Outros atributos
+    <!-- a[href=# title=descricao]*4 -->
+    <a href="#" title="descricao"></a>
+    <a href="#" title="descricao"></a>
+    <a href="#" title="descricao"></a>
+    <a href="#" title="descricao"></a>
+    <!-- img[width=200 height=100]*4 -->
+    <img src="" alt="" width="200" height="100">
+    <img src="" alt="" width="200" height="100">
+    <img src="" alt="" width="200" height="100">
+    <img src="" alt="" width="200" height="100">
+    
+    Numéricos
+    <!-- ol>li.item$*3 -->
+    <ol>
+        <li class="item1"></li>
+        <li class="item2"></li>
+        <li class="item3"></li>
+    </ol>
+    <!-- ol>li.item$$$*3 -->
+    <ol>
+        <li class="item001"></li>
+        <li class="item002"></li>
+        <li class="item003"></li>
+    </ol>
+    <!-- ol>[href=item$$$@-]*3 -->
+    <ol>
+        <li href="item003"></li>
+        <li href="item002"></li>
+        <li href="item001"></li>
+    </ol>
+    
+    <!-- a[href=item$$$@-]*3 -->
+    <a href="item003"></a>
+    <a href="item002"></a>
+    <a href="item001"></a>
+    
+    <!-- a[href=item$$$]{texto$$@-3}*5 -->
+    <a href="item001">texto07</a>
+    <a href="item002">texto06</a>
+    <a href="item003">texto05</a>
+    <a href="item004">texto04</a>
+    <a href="item005">texto03</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
